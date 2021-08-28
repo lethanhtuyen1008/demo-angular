@@ -14,7 +14,7 @@
     "precommit": "npm run p:fix",
     "husky": {
       "hooks": {
-        "pre-commit": "npm run p:fix"
+        "pre-commit": "npm run p:fix",
       }
     }
   },
