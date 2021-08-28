@@ -11,12 +11,7 @@
     "e2e": "ng e2e",
     "p:fix": "prettier --config ./.prettierrc --write \"src/{app, environments}/**/*{.ts,.html.scss}\"",
     "p:verify": "prettier --config ./.prettierrc --write \"src/{app, environments}/**/*{.ts,.html.scss}\"",
-    "precommit": "npm run p:fix",
-    "husky": {
-      "hooks": {
-        "pre-commit": "npm run p:fix",
-      }
-    }
+    "precommit": "npm run p:fix"
   },
   "pre-commit": [
     "lint"
