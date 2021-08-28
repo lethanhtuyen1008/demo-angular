@@ -6,16 +6,9 @@ import { UserService } from '../core';
 
 @Injectable()
 export class HomeAuthResolver implements Resolve<boolean> {
-  constructor(
-    private userService: UserService
-  ) {}
+  constructor(private userService: UserService) {}
 
-  resolve(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): Observable<boolean> {
-
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {
     return this.userService.isAuthenticated.pipe(take(1));
-
   }
 }

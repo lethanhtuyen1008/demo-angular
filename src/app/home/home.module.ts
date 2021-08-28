@@ -5,15 +5,8 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 
 @NgModule({
-  imports: [
-    SharedModule,
-    HomeRoutingModule
-  ],
-  declarations: [
-    HomeComponent
-  ],
-  providers: [
-    HomeAuthResolver
-  ]
+  imports: [SharedModule, HomeRoutingModule],
+  declarations: [HomeComponent],
+  providers: [HomeAuthResolver],
 })
 export class HomeModule {}

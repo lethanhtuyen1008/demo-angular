@@ -6,7 +6,7 @@ import { Article, ArticlesService } from '../core';
 
 @Component({
   selector: 'app-editor-page',
-  templateUrl: './editor.component.html'
+  templateUrl: './editor.component.html',
 })
 export class EditorComponent implements OnInit {
   article: Article = {} as Article;
@@ -19,13 +19,13 @@ export class EditorComponent implements OnInit {
     private articlesService: ArticlesService,
     private route: ActivatedRoute,
     private router: Router,
-    private fb: FormBuilder
+    private fb: FormBuilder,
   ) {
     // use the FormBuilder to create a form group
     this.articleForm = this.fb.group({
       title: '',
       description: '',
-      body: ''
+      body: '',
     });
 
     // Initialized tagList as empty array
@@ -57,7 +57,7 @@ export class EditorComponent implements OnInit {
   }
 
   removeTag(tagName: string) {
-    this.article.tagList = this.article.tagList.filter(tag => tag !== tagName);
+    this.article.tagList = this.article.tagList.filter((tag) => tag !== tagName);
   }
 
   submitForm() {
@@ -68,11 +68,11 @@ export class EditorComponent implements OnInit {
 
     // post the changes
     this.articlesService.save(this.article).subscribe(
-      article => this.router.navigateByUrl('/article/' + article.slug),
-      err => {
+      (article) => this.router.navigateByUrl('/article/' + article.slug),
+      (err) => {
         this.errors = err;
         this.isSubmitting = false;
-      }
+      },
     );
   }
 

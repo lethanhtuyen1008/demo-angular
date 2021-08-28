@@ -6,7 +6,7 @@ import { User, UserService } from '../core';
 
 @Component({
   selector: 'app-settings-page',
-  templateUrl: './settings.component.html'
+  templateUrl: './settings.component.html',
 })
 export class SettingsComponent implements OnInit {
   user: User = {} as User;
@@ -14,18 +14,14 @@ export class SettingsComponent implements OnInit {
   errors: Object = {};
   isSubmitting = false;
 
-  constructor(
-    private router: Router,
-    private userService: UserService,
-    private fb: FormBuilder
-  ) {
+  constructor(private router: Router, private userService: UserService, private fb: FormBuilder) {
     // create form group using the form builder
     this.settingsForm = this.fb.group({
       image: '',
       username: '',
       bio: '',
       email: '',
-      password: ''
+      password: '',
     });
     // Optional: subscribe to changes on the form
     // this.settingsForm.valueChanges.subscribe(values => this.updateUser(values));
@@ -49,19 +45,16 @@ export class SettingsComponent implements OnInit {
     // update the model
     this.updateUser(this.settingsForm.value);
 
-    this.userService
-    .update(this.user)
-    .subscribe(
-      updatedUser => this.router.navigateByUrl('/profile/' + updatedUser.username),
-      err => {
+    this.userService.update(this.user).subscribe(
+      (updatedUser) => this.router.navigateByUrl('/profile/' + updatedUser.username),
+      (err) => {
         this.errors = err;
         this.isSubmitting = false;
-      }
+      },
     );
   }
 
   updateUser(values: Object) {
     Object.assign(this.user, values);
   }
-
 }

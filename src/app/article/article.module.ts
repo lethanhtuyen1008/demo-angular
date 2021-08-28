@@ -6,20 +6,10 @@ import { ArticleRoutingModule } from './article-routing.module';
 import { ArticleComponent } from './article.component';
 import { MarkdownPipe } from './markdown.pipe';
 
-
 @NgModule({
-  imports: [
-    SharedModule,
-    ArticleRoutingModule
-  ],
-  declarations: [
-    ArticleComponent,
-    ArticleCommentComponent,
-    MarkdownPipe
-  ],
+  imports: [SharedModule, ArticleRoutingModule],
+  declarations: [ArticleComponent, ArticleCommentComponent, MarkdownPipe],
 
-  providers: [
-    ArticleResolver
-  ]
+  providers: [ArticleResolver],
 })
 export class ArticleModule {}

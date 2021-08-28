@@ -5,10 +5,9 @@ import { EditableArticleResolver } from './editable-article-resolver.service';
 import { EditorRoutingModule } from './editor-routing.module';
 import { EditorComponent } from './editor.component';
 
-
 @NgModule({
   imports: [SharedModule, EditorRoutingModule],
   declarations: [EditorComponent],
-  providers: [EditableArticleResolver]
+  providers: [EditableArticleResolver],
 })
 export class EditorModule {}
