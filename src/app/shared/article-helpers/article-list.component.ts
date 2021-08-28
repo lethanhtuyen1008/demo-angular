@@ -27,7 +27,7 @@ export class ArticleListComponent {
   currentPage = 1;
   totalPages: Array<number> = [1];
 
-  setPageTo(pageNumber) {
+  setPageTo(pageNumber: number) {
     this.currentPage = pageNumber;
     this.runQuery();
   }

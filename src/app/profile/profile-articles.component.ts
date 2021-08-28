@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-
+import { ActivatedRoute } from '@angular/router';
 import { ArticleListConfig, Profile } from '../core';
+
 
 @Component({
   selector: 'app-profile-articles',
@@ -10,7 +10,6 @@ import { ArticleListConfig, Profile } from '../core';
 export class ProfileArticlesComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
-    private router: Router
   ) {}
 
   profile: Profile;
@@ -20,7 +19,7 @@ export class ProfileArticlesComponent implements OnInit {
   };
 
   ngOnInit() {
-    this.route.parent.data.subscribe(
+    this?.route?.parent?.data.subscribe(
       (data: {profile: Profile}) => {
         this.profile = data.profile;
         this.articlesConfig = {

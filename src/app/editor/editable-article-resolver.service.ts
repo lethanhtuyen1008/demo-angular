@@ -26,6 +26,7 @@ export class EditableArticleResolver implements Resolve<Article> {
               return article;
             } else {
               this.router.navigateByUrl('/');
+              return null;
             }
           }
         ),

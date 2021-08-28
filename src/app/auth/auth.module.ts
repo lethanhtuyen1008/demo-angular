@@ -1,10 +1,8 @@
-import { ModuleWithProviders, NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-
-import { AuthComponent } from './auth.component';
-import { NoAuthGuard } from './no-auth-guard.service';
+import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared';
 import { AuthRoutingModule } from './auth-routing.module';
+import { AuthComponent } from './auth.component';
+import { NoAuthGuard } from './no-auth-guard.service';
 
 @NgModule({
   imports: [

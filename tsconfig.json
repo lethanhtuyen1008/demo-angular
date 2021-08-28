@@ -10,6 +10,15 @@
     "module": "es2020",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
     "target": "es2015",
     "typeRoots": [
       "node_modules/@types"
@@ -17,6 +26,7 @@
     "lib": [
       "es2017",
       "dom"
-    ]
-  }
+    ],
+  },
+  "include": ["src"]
 }

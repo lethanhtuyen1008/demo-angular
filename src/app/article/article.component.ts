@@ -104,7 +104,7 @@ export class ArticleComponent implements OnInit {
       );
   }
 
-  onDeleteComment(comment) {
+  onDeleteComment(comment: any) {
     this.commentsService.destroy(comment.id, this.article.slug)
       .subscribe(
         success => {

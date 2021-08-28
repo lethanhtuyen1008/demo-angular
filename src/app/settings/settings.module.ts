@@ -1,10 +1,8 @@
-import { ModuleWithProviders, NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-
-import { SettingsComponent } from './settings.component';
-import { AuthGuard } from '../core';
+import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared';
 import { SettingsRoutingModule } from './settings-routing.module';
+import { SettingsComponent } from './settings.component';
+
 
 @NgModule({
   imports: [

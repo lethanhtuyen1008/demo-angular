@@ -28,16 +28,16 @@ export class ArticlesService {
     );
   }
 
-  get(slug): Observable<Article> {
+  get(slug: any): Observable<Article> {
     return this.apiService.get('/articles/' + slug)
       .pipe(map(data => data.article));
   }
 
-  destroy(slug) {
+  destroy(slug: any) {
     return this.apiService.delete('/articles/' + slug);
   }
 
-  save(article): Observable<Article> {
+  save(article: any): Observable<Article> {
     // If we're updating an existing article
     if (article.slug) {
       return this.apiService.put('/articles/' + article.slug, {article: article})
@@ -50,11 +50,11 @@ export class ArticlesService {
     }
   }
 
-  favorite(slug): Observable<Article> {
+  favorite(slug: any): Observable<Article> {
     return this.apiService.post('/articles/' + slug + '/favorite');
   }
 
-  unfavorite(slug): Observable<Article> {
+  unfavorite(slug: any): Observable<Article> {
     return this.apiService.delete('/articles/' + slug + '/favorite');
   }
 
