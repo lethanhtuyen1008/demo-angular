@@ -18,7 +18,6 @@ export class HomeComponent implements OnInit {
   ) {}
 
   employees: Employee[] = [];
-
   isAuthenticated: boolean;
 
   ngOnInit() {
@@ -29,7 +28,7 @@ export class HomeComponent implements OnInit {
 
   onGetListEmployee() {
     this.customBlockUIService.openBlockUI();
-
+    this.employees = [];
     this.employeeService
       .getListEmployee()
       .toPromise()
