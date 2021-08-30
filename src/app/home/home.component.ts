@@ -27,11 +27,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  onClick() {
-    this.customToastService.openToast({ message: 'open', title: 'Title', type: 'success' });
-  }
-
-  onBlockUI() {
+  onGetListEmployee() {
     this.customBlockUIService.openBlockUI();
 
     this.employeeService
