@@ -8,10 +8,7 @@ import { ShowAuthedDirective } from './show-authed.directive';
 
 @NgModule({
   imports: [CommonModule, FormsModule, ReactiveFormsModule, HttpClientModule, RouterModule],
-  declarations: [
-    ListErrorsComponent,
-    ShowAuthedDirective,
-  ],
+  declarations: [ListErrorsComponent, ShowAuthedDirective],
   exports: [
     CommonModule,
     FormsModule,

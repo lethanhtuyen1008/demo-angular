@@ -8,11 +8,20 @@ import { FooterComponent, HeaderComponent, SharedModule } from './shared';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { CustomToastComponent } from './shared/custom-toast/custom-toast.component';
+import { CustomBlockUIComponent } from './shared/custom-blockUI/custom-blockUI.component';
 import { MessageService } from 'primeng/api';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BlockUIModule } from 'primeng/blockui';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 @NgModule({
-  declarations: [AppComponent, FooterComponent, HeaderComponent, CustomToastComponent],
+  declarations: [
+    AppComponent,
+    FooterComponent,
+    HeaderComponent,
+    CustomToastComponent,
+    CustomBlockUIComponent,
+  ],
   imports: [
     BrowserModule,
     CoreModule,
@@ -22,6 +31,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     ToastModule,
     BrowserAnimationsModule,
+    BlockUIModule,
+    ProgressSpinnerModule,
   ],
   providers: [MessageService],
   bootstrap: [AppComponent],

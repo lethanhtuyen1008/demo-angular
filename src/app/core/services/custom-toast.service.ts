@@ -5,7 +5,6 @@ import { ToastRequest } from '../../shared/custom-toast/custom-toast.module';
   providedIn: 'root',
 })
 export class CustomToastService {
-  messages: string[] = [];
   constructor(private messageService: MessageService) {}
 
   openToast(request: ToastRequest) {
