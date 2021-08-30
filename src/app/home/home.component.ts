@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../core';
+import { UserService, EmployeeService } from '../core';
 import { CustomToastService } from '../core/services/custom-toast.service';
 import { CustomBlockUIService } from '../core/services/custom-blockUI.service';
+import { Employee } from '../core/models/employee.model';
 
 @Component({
   selector: 'app-home-page',
@@ -13,7 +14,10 @@ export class HomeComponent implements OnInit {
     private userService: UserService,
     private customToastService: CustomToastService,
     private customBlockUIService: CustomBlockUIService,
+    private employeeService: EmployeeService,
   ) {}
+
+  employees: Employee[] = [];
 
   isAuthenticated: boolean;
 
@@ -29,5 +33,17 @@ export class HomeComponent implements OnInit {
 
   onBlockUI() {
     this.customBlockUIService.openBlockUI();
+
+    this.employeeService
+      .getListEmployee()
+      .toPromise()
+      .then((data) => {
+        this.employees = data;
+        this.customBlockUIService.closeBlockUI();
+        this.customToastService.openToast({ message: 'Get list employee sucess', title: 'Success', type: 'success' });
+      })
+      .catch(() =>
+        this.customToastService.openToast({ message: 'Get list employee failed!', title: 'Error', type: 'error' }),
+      );
   }
 }
