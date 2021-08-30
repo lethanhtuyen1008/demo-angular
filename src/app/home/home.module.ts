@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { SharedModule } from '../shared';
+import { CustomButtonModule } from '../shared/custom-button/custom-button.module';
 import { HomeAuthResolver } from './home-auth-resolver.service';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-import { ProgressBarModule } from 'primeng/progressbar';
+
 @NgModule({
-  imports: [SharedModule, HomeRoutingModule, ProgressBarModule],
+  imports: [HomeRoutingModule, CustomButtonModule],
   declarations: [HomeComponent],
   providers: [HomeAuthResolver],
 })
