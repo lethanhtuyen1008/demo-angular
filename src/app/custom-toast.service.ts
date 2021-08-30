@@ -7,11 +7,12 @@ import { MessageService } from 'primeng/api';
 export class CustomToastService {
   messages: string[] = [];
   constructor(private messageService: MessageService) {}
+
   add(message: string) {
-    this.messageService.add({severity:'success', summary: 'Success', detail: 'Message Content'});
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: message });
   }
 
   clear() {
-    this.messages = [];
+    this.messageService.clear();
   }
 }

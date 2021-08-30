@@ -11,6 +11,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.userService.populate();
-     this.primengConfig.ripple = true;
+    this.primengConfig.ripple = true;
   }
 }
