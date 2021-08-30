@@ -1,7 +1,8 @@
 <div class="home-page">
   <custom-button label="Get Employess" (click)="onGetListEmployee()"></custom-button>
-  {{employees.length}}
-  <li *ngIf="employees.length > 0">
-    <span>default</span>
-  </li>
+  <div *ngIf="employees.length > 0">
+    <div *ngFor="let employee of employees">
+      <span>{{employee.name}}</span>
+    </div>
+  </div>
 </div>
