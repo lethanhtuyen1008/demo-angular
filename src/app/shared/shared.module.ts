@@ -14,7 +14,14 @@ import { ShowAuthedDirective } from './show-authed.directive';
 import { ButtonModule } from 'primeng/button';
 
 @NgModule({
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, HttpClientModule, RouterModule, ButtonModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule,
+    ButtonModule,
+  ],
   declarations: [
     ArticleListComponent,
     ArticleMetaComponent,
