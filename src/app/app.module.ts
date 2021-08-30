@@ -7,9 +7,10 @@ import { HomeModule } from './home/home.module';
 import { FooterComponent, HeaderComponent, SharedModule } from './shared';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
+import { CustomToastComponent } from './custom-toast/custom-toast.component';
 
 @NgModule({
-  declarations: [AppComponent, FooterComponent, HeaderComponent],
+  declarations: [AppComponent, FooterComponent, HeaderComponent, CustomToastComponent],
   imports: [BrowserModule, CoreModule, SharedModule, HomeModule, AuthModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

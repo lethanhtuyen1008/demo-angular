@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { CustomToastService } from '../custom-toast.service';
 import { ArticleListConfig, TagsService, UserService } from '../core';
 
 @Component({
@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
     private router: Router,
     private tagsService: TagsService,
     private userService: UserService,
+    private customToastService: CustomToastService
   ) {}
 
   isAuthenticated: boolean;
@@ -50,5 +51,8 @@ export class HomeComponent implements OnInit {
 
     // Otherwise, set the list object
     this.listConfig = { type: type, filters: filters };
+  }
+  onClick() {
+    this.customToastService.add('message nè');
   }
 }
