@@ -53,6 +53,6 @@ export class HomeComponent implements OnInit {
     this.listConfig = { type: type, filters: filters };
   }
   onClick() {
-    this.customToastService.add('message nè');
+    this.customToastService.openToast({message:'open', title:'Title', type:'success'});
   }
 }
