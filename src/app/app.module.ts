@@ -7,7 +7,7 @@ import { HomeModule } from './home/home.module';
 import { FooterComponent, HeaderComponent, SharedModule } from './shared';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
-import { CustomToastComponent } from './custom-toast/custom-toast.component';
+import { CustomToastComponent } from './shared/custom-toast/custom-toast.component';
 import { MessageService } from 'primeng/api';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
