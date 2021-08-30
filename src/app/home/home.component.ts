@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
     private router: Router,
     private tagsService: TagsService,
     private userService: UserService,
-    private customToastService: CustomToastService
+    private customToastService: CustomToastService,
   ) {}
 
   isAuthenticated: boolean;

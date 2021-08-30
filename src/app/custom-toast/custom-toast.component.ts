@@ -4,13 +4,10 @@ import { CustomToastService } from '../custom-toast.service';
 @Component({
   selector: 'app-custom-toast',
   templateUrl: './custom-toast.component.html',
-  styleUrls: ['./custom-toast.component.css']
+  styleUrls: ['./custom-toast.component.css'],
 })
 export class CustomToastComponent implements OnInit {
+  constructor(public messageService: CustomToastService) {}
 
- constructor(public messageService: CustomToastService) {}
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

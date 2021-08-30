@@ -14,8 +14,6 @@ import { CustomToastComponent } from './custom-toast/custom-toast.component';
   imports: [BrowserModule, CoreModule, SharedModule, HomeModule, AuthModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA,
-  ]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}
