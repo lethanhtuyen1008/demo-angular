@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { User, UserService } from '../../core';
 import * as $ from 'jquery';
-  
+
 @Component({
   selector: 'app-layout-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  constructor(private userService: UserService,  ) {}
+  constructor(private userService: UserService) {}
   currentUser: User;
   classOpen = 'show';
   classClose = 'hidden';
@@ -19,8 +19,8 @@ export class HeaderComponent implements OnInit {
       this.currentUser = userData;
     });
 
-    this.urlActive = (window.location.href.split('/')[3]);
-    
+    this.urlActive = window.location.href.split('/')[3];
+
     if (localStorage.getItem('isOpen') === 'true') {
       $('.navigation').addClass('active');
       this.classOpen = 'hidden';
