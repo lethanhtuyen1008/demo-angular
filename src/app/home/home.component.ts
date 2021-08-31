@@ -35,10 +35,18 @@ export class HomeComponent implements OnInit {
       .then((data) => {
         this.employees = data;
         this.customBlockUIService.closeBlockUI();
-        this.customToastService.openToast({ message: 'Get list employee sucess', title: 'Success', type: 'success' });
+        this.customToastService.openToast({
+          message: 'Get list employee sucess',
+          title: 'Success',
+          type: 'success',
+        });
       })
       .catch(() =>
-        this.customToastService.openToast({ message: 'Get list employee failed!', title: 'Error', type: 'error' }),
+        this.customToastService.openToast({
+          message: 'Get list employee failed!',
+          title: 'Error',
+          type: 'error',
+        }),
       );
   }
 }

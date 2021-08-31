@@ -20,17 +20,17 @@ export class HeaderComponent implements OnInit {
   }
 
   onOpenMenu() {
-    $(".navigation").addClass("active");
+    $('.navigation').addClass('active');
     this.classOpen = 'hidden';
     this.classClose = 'show';
-    $("#menu").addClass("active-menu");
-    $("#menu").removeClass("close-menu");
+    $('#menu').addClass('active-menu');
+    $('#menu').removeClass('close-menu');
   }
 
   onCloseMenu() {
-    $(".navigation").removeClass("active");
-    $("#menu").removeClass("active-menu");
-    $("#menu").addClass("close-menu");
+    $('.navigation').removeClass('active');
+    $('#menu').removeClass('active-menu');
+    $('#menu').addClass('close-menu');
     this.classOpen = 'show';
     this.classClose = 'hidden';
   }
