@@ -12,7 +12,7 @@
 }
 
 .close-menu{
-  width: 80px;
+  width: 76px;
   transition: 0.5s;
 }
 
@@ -56,6 +56,22 @@
 
 .navigation ul li.active {
     background: #fff;
+    -webkit-animation:fontbulger 0.15s;
+}
+
+@-webkit-keyframes fontbulger  {
+   0%{
+      font-size:0.5em;
+   }
+   
+   50% {
+      font-size: 0.75em;
+   }
+
+    100% {
+      font-size: 1em;
+   }
+
 }
 
 .navigation ul li b:nth-child(1) {
