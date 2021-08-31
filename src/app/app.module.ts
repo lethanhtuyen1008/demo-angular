@@ -13,6 +13,7 @@ import { MessageService } from 'primeng/api';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BlockUIModule } from 'primeng/blockui';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
     BrowserAnimationsModule,
     BlockUIModule,
     ProgressSpinnerModule,
+    ScrollPanelModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent],

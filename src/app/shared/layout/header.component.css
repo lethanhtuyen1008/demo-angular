@@ -12,11 +12,9 @@
 }
 
 .close-menu{
-  width: 80px;
+  width: 76px;
   transition: 0.5s;
 }
-
-
 
 .navigation {
     position: fixed;
@@ -43,7 +41,7 @@
     left: 0px;
     width: 100%;
     padding-left: 5px;
-    padding-top: 40px;
+    padding-top: 30px;
 }
 
 .navigation ul li {
@@ -56,6 +54,22 @@
 
 .navigation ul li.active {
     background: #fff;
+    -webkit-animation:fontbulger 0.15s;
+}
+
+@-webkit-keyframes fontbulger  {
+   0%{
+      font-size:0.5em;
+   }
+   
+   50% {
+      font-size: 0.75em;
+   }
+
+    100% {
+      font-size: 1em;
+   }
+
 }
 
 .navigation ul li b:nth-child(1) {
@@ -140,7 +154,7 @@
 
 .toggle {
     position: fixed;
-    top: 20px;
+    top: 33px;
     right: 20px;
     width: 50px;
     height: 50px;
@@ -169,15 +183,29 @@
 }
 
 .hidden{
-  display: none;
-   position: absolute;
+    display: none;
+    position: absolute;
     color: #fff;
     font-size: 34px;
 }
 
 .show{
-  display: block;
-   position: absolute;
+    display: block;
+    position: absolute;
     color: #fff;
     font-size: 34px;
+}
+
+.breadcrum {
+    position: fixed;
+    top: 33px;
+    left: 300px;
+    width: 80%;
+    height: 50px;
+    background: #4087ee;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

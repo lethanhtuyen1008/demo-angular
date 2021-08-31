@@ -1,10 +1,11 @@
 <div style="display: flex;">
   <app-layout-header></app-layout-header>
-  <div>
-    <router-outlet></router-outlet>
+  <div style="width: 100%; padding:8px; margin-top:95px;">
+    <p-scrollPanel [style]="{width: '100%', height: 'calc(100vh - 212px)'}">
+      <router-outlet></router-outlet>
+    </p-scrollPanel>
   </div>
 </div>
-
 
 <app-custom-toast></app-custom-toast>
 
