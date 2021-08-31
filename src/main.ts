@@ -11,5 +11,5 @@ if (environment.production) {
 const bootstrapPromise =  platformBrowserDynamic().bootstrapModule(AppModule);
 
 // Logging bootstrap information
-bootstrapPromise.then(success => console.log(`Bootstrap success`))
+bootstrapPromise.then(success => {})
   .catch(err => console.error(err));

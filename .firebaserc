@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "staging": "le-thanh-tuyen",
+    "default": "le-thanh-tuyen"
+  }
+}
