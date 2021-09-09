@@ -47,4 +47,8 @@ export class HeaderComponent implements OnInit {
     this.classClose = 'hidden';
     localStorage.setItem('isOpen', 'false');
   }
+
+  onClickLink(link:string) {
+    this.urlActive = link
+  }
 }

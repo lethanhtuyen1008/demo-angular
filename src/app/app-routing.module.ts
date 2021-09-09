@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'article',
+    loadChildren: () => import('./article/article.module').then((m) => m.ArticleModule),
+  },
+];
 
 @NgModule({
   imports: [

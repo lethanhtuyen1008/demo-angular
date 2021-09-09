@@ -1,20 +1,10 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, Resolve, Router, RouterStateSnapshot } from '@angular/router';
-import { Observable } from 'rxjs';
-import { Article, ArticlesService } from '../core';
-// import { UserService } from '../core';
-import { catchError } from 'rxjs/operators';
-
+import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
 @Injectable()
-export class ArticleResolver implements Resolve<Article> {
+export class ArticleResolver implements Resolve<any> {
   constructor(
-    private articlesService: ArticlesService,
-    private router: Router, // private userService: UserService
   ) {}
 
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> {
-    return this.articlesService
-      .get(route.params['slug'])
-      .pipe(catchError((_err) => this.router.navigateByUrl('/')));
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
   }
 }
